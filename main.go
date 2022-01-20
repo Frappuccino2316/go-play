@@ -2,6 +2,13 @@ package main
 
 import "fmt"
 
+// スライス
+func main() {
+	n := make([]int, 5, 10)
+	fmt.Println(len(n))
+	fmt.Println(cap(n))
+}
+
 // func main() {
 // 	f := later()
 // 	fmt.Println(f("Golang"))
@@ -21,15 +28,15 @@ import "fmt"
 // }
 
 // ラベル
-func main() {
-LOOP:
-	for {
-		for {
-			for {
-				fmt.Println("Three nest!")
-				break LOOP
-			}
-		}
-	}
-	fmt.Println(("完了"))
-}
+// func main() {
+// LOOP:
+// 	for {
+// 		for {
+// 			for {
+// 				fmt.Println("Three nest!")
+// 				break LOOP
+// 			}
+// 		}
+// 	}
+// 	fmt.Println(("完了"))
+// }
