@@ -2,15 +2,23 @@ package main
 
 import "fmt"
 
-// スライス
+// map
 func main() {
-	// n := make([]int, 5, 10)
-	n := []int{1, 2, 3}
-	n = append(n, 4, 5, 6)
-	fmt.Println("n: ", n)
-	fmt.Println(len(n))
-	fmt.Println(cap(n))
+	m := make(map[string]int)
+	m["one"] = 1
+	m["two"] = 2
+	fmt.Println(m)
 }
+
+// スライス
+// func main() {
+// 	// n := make([]int, 5, 10)
+// 	n := []int{1, 2, 3}
+// 	n = append(n, 4, 5, 6)
+// 	fmt.Println("n: ", n)
+// 	fmt.Println(len(n))
+// 	fmt.Println(cap(n))
+// }
 
 // func main() {
 // 	f := later()
