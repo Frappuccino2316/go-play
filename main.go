@@ -4,7 +4,10 @@ import "fmt"
 
 // スライス
 func main() {
-	n := make([]int, 5, 10)
+	// n := make([]int, 5, 10)
+	n := []int{1, 2, 3}
+	n = append(n, 4, 5, 6)
+	fmt.Println("n: ", n)
 	fmt.Println(len(n))
 	fmt.Println(cap(n))
 }
