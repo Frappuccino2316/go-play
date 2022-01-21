@@ -3,8 +3,13 @@ package main
 import "fmt"
 
 func main() {
-	var p *int
+	var i int
+	p := &i
+	pp := &p
 	fmt.Println(p)
+	fmt.Printf("%T\n", p)
+	fmt.Println(pp)
+	fmt.Printf("%T\n", pp)
 }
 
 // map
