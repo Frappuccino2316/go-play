@@ -2,13 +2,18 @@ package main
 
 import "fmt"
 
-// map
 func main() {
-	m := make(map[string]int)
-	m["one"] = 1
-	m["two"] = 2
-	fmt.Println(m)
+	var p *int
+	fmt.Println(p)
 }
+
+// map
+// func main() {
+// 	m := make(map[string]int)
+// 	m["one"] = 1
+// 	m["two"] = 2
+// 	fmt.Println(m)
+// }
 
 // スライス
 // func main() {
