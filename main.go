@@ -5,12 +5,22 @@ import "fmt"
 func main() {
 	var i int
 	p := &i
-	pp := &p
-	fmt.Println(p)
-	fmt.Printf("%T\n", p)
-	fmt.Println(pp)
-	fmt.Printf("%T\n", pp)
+	i = 3
+	fmt.Println(*p)
+
+	*p = 10
+	fmt.Println(i)
 }
+
+// func main() {
+// 	var i int
+// 	p := &i
+// 	pp := &p
+// 	fmt.Println(p)
+// 	fmt.Printf("%T\n", p)
+// 	fmt.Println(pp)
+// 	fmt.Printf("%T\n", pp)
+// }
 
 // map
 // func main() {
