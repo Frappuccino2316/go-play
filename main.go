@@ -5,7 +5,7 @@ import "fmt"
 func pow(p *[3]int) {
 	i := 0
 	for i < 3 {
-		(*p)[i] = (*p)[i] * (*p)[i]
+		p[i] = p[i] * p[i]
 		i++
 	}
 }
