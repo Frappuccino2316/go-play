@@ -3,14 +3,27 @@ package main
 import "fmt"
 
 func main() {
-	var i int
-	p := &i
-	i = 3
-	fmt.Println(*p)
-
-	*p = 10
+	i := 1
+	fmt.Println(i)
+	inc(&i)
+	inc(&i)
+	inc(&i)
 	fmt.Println(i)
 }
+
+func inc(p *int) {
+	*p++
+}
+
+// func main() {
+// 	var i int
+// 	p := &i
+// 	i = 3
+// 	fmt.Println(*p)
+
+// 	*p = 10
+// 	fmt.Println(i)
+// }
 
 // func main() {
 // 	var i int
