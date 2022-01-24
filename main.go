@@ -2,20 +2,28 @@ package main
 
 import "fmt"
 
-func pow(p *[3]int) {
-	i := 0
-	for i < 3 {
-		p[i] = p[i] * p[i]
-		i++
-	}
+func main() {
+	fmt.Println("First Process")
+	goto L
+	fmt.Println("Second Process")
+L:
+	fmt.Println("Third Process")
 }
 
-func main() {
-	p := [3]int{1, 2, 3}
-	fmt.Println(p)
-	pow(&p)
-	fmt.Println(p)
-}
+// func pow(p *[3]int) {
+// 	i := 0
+// 	for i < 3 {
+// 		p[i] = p[i] * p[i]
+// 		i++
+// 	}
+// }
+
+// func main() {
+// 	p := [3]int{1, 2, 3}
+// 	fmt.Println(p)
+// 	pow(&p)
+// 	fmt.Println(p)
+// }
 
 // func main() {
 // 	i := 1
