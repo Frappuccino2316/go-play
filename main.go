@@ -6,17 +6,22 @@ import (
 )
 
 func main() {
-	go sub()
-	for {
-		fmt.Println(fmt.Println("First loop"))
-		time.Sleep(time.Second * 3)
+	ch := make(chan int)
+
+	go receiver(ch)
+
+	i := 0
+	for i < 10000 {
+		ch <- i
+		i++
+		time.Sleep(time.Second)
 	}
 }
 
-func sub() {
+func receiver(ch <-chan int) {
 	for {
-		fmt.Println("Second loop")
-		time.Sleep(time.Second * 3)
+		i := <-ch
+		fmt.Println(i)
 	}
 }
 
