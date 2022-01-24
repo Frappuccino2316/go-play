@@ -1,14 +1,32 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 func main() {
-	fmt.Println("First Process")
-	goto L
-	fmt.Println("Second Process")
-L:
-	fmt.Println("Third Process")
+	go sub()
+	for {
+		fmt.Println(fmt.Println("First loop"))
+		time.Sleep(time.Second * 3)
+	}
 }
+
+func sub() {
+	for {
+		fmt.Println("Second loop")
+		time.Sleep(time.Second * 3)
+	}
+}
+
+// func main() {
+// 	fmt.Println("First Process")
+// 	goto L
+// 	fmt.Println("Second Process")
+// L:
+// 	fmt.Println("Third Process")
+// }
 
 // func pow(p *[3]int) {
 // 	i := 0
